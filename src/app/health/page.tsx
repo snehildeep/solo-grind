@@ -18,7 +18,7 @@ export default function HealthPage() {
           className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-xl"
           onClick={() => handleCompleteTask(50)}
         >
-          ✅ Complete "Study 1 hour" (+50 XP)
+          ✅ Complete &quot;Study 1 hour&quot; (+50 XP)
         </button>
 
         <button
