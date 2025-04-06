@@ -1,25 +1,19 @@
-// src/app/page.tsx
-"use client";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Home() {
-  const router = useRouter();
-
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen gap-4">
-      <h1 className="text-4xl font-bold mb-6">Solo Grind</h1>
-      <button
-        className="bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600"
-        onClick={() => router.push("/health")}
-      >
-        Enter Health Mode 🧘
-      </button>
-      <button
-        className="bg-yellow-500 text-white px-6 py-2 rounded hover:bg-yellow-600"
-        onClick={() => router.push("/wealth")}
-      >
-        Enter Wealth Mode 💰
-      </button>
+    <main className="flex min-h-screen items-center justify-center gap-6 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('bg1solo.jpeg')" }}>
+      <Link href="/health">
+        <button className="bg-blue-200 text-black text-xl px-20 py-3 rounded-2xl  hover:text-white hover:bg-black transition">
+          Health Mode 
+        </button>
+      </Link>
+      <Link href="/wealth">
+        <button className="bg-blue-200 text-black text-xl px-20 py-3 rounded-2xl hover:text-white hover:bg-black transition">
+          Wealth Mode 
+        </button>
+      </Link>
+      
     </main>
   );
 }
